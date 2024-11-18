@@ -38,6 +38,7 @@ export type EventPayloadByEvent = {
   [Event.PlaybackMetadataReceived]: PlaybackMetadataReceivedEvent;
   [Event.PlaybackPlayWhenReadyChanged]: PlaybackPlayWhenReadyChangedEvent;
   [Event.PlaybackProgressUpdated]: PlaybackProgressUpdatedEvent;
+  [Event.PlaybackAudioTapReceived]: { amplitude: number; eqBands: number[]; };
   [Event.RemotePlay]: never;
   [Event.RemotePlayPause]: never;
   [Event.RemotePlayId]: RemotePlayIdEvent;

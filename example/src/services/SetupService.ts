@@ -15,6 +15,7 @@ const setupPlayer = async (
   const setup = async () => {
     try {
       await TrackPlayer.setupPlayer(options, background);
+      await TrackPlayer.addAudioTap();
     } catch (error) {
       return (error as Error & { code?: string }).code;
     }

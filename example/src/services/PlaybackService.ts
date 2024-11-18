@@ -145,6 +145,10 @@ export async function PlaybackService() {
   TrackPlayer.addEventListener(Event.MetadataCommonReceived, (event) => {
     console.log('Event.MetadataCommonReceived', event);
   });
+  
+  TrackPlayer.addEventListener(Event.PlaybackAudioTapReceived, (event) => {
+    console.log('Event.PlaybackAudioTapReceived', event);
+  });
 
   TrackPlayer.addEventListener(
     Event.PlaybackMetadataReceived,
