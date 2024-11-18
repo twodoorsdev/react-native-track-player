@@ -33,6 +33,8 @@ enum EventType: String, CaseIterable {
     case MetadataTimedReceived = "metadata-timed-received"
     case MetadataCommonReceived = "metadata-common-received"
     
+    case PlaybackAudioTapReceived = "playback-audio-tap-received"
+    
     static func allRawValues() -> [String] {
         return allCases.map { $0.rawValue }
     }

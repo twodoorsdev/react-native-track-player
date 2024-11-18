@@ -102,6 +102,14 @@ export function isServiceRunning(): Promise<boolean> {
   return TrackPlayer.isServiceRunning();
 }
 
+export function addAudioTap(): Promise<null> {
+  return TrackPlayer.addAudioTap();
+}
+
+export function removeAudioTap(): Promise<null> {
+  return TrackPlayer.removeAudioTap();
+}
+
 // MARK: - Queue API
 
 /**
@@ -408,7 +416,7 @@ export const setAnimatedVolume = async ({
     /*
     TODO: Animated.value change relies on React rendering so Android
     headlessJS will not work with it. however does iOS and windows work in the background?
-    if not this code block is needed 
+    if not this code block is needed
     if (AppState.currentState !== 'active') {
       // need to figure out a way to run Animated.timing in background. probably needs our own module
       duration = 0;

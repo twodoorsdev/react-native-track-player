@@ -317,6 +317,18 @@ public class RNTrackPlayer: RCTEventEmitter, AudioSessionControllerDelegate {
         resolve(player != nil)
     }
 
+    @objc(addAudioTap:rejecter:)
+    public func addTap(resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) {
+        player.audioTap = WaveformAudioTap()
+        resolve(NSNull())
+    }
+    
+    @objc(removeAudioTap:rejecter:)
+    public func removeTap(resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) {
+        player.audioTap = nil
+        resolve(NSNull())
+    }
+    
     @objc(updateOptions:resolver:rejecter:)
     public func update(options: [String: Any], resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) {
         if (rejectWhenNotInitialized(reject: reject)) { return }

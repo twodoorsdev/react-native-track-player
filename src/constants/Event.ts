@@ -41,6 +41,9 @@ export enum Event {
    * headless setup.
    */
   PlaybackResume = 'playback-resume-android',
+
+  PlaybackAudioTapReceived = 'playback-audio-tap-received',
+
   /**
    * Fired when the user presses the play button.
    * See https://rntp.dev/docs/api/events#remoteplay
